@@ -28,3 +28,9 @@ EOF
 
 Never add Co-Authored-By agents in commit message.
 Branch naming for issue fixes: `fix-<issue-number>`
+Branch naming for features: `feat-<short-description>`
+
+## Personal Notes
+
+- Upstream repo: https://github.com/microsoft/playwright-cli
+- My fork is for learning browser automation internals; not intended for production use.
