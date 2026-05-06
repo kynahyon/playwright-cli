@@ -39,3 +39,5 @@ Branch naming for features: `feat-<short-description>`
 - When debugging CDP messages, use `DEBUG=pw:protocol` env var to dump raw protocol traffic.
 - When debugging network interception specifically, `DEBUG=pw:network` is more focused and less noisy.
 - Useful combo for proxy issues: `DEBUG=pw:protocol,pw:network node script.js 2>&1 | grep -i proxy`
+- Useful combo for request interception: `DEBUG=pw:network node script.js 2>&1 | grep -i intercept`
+- For verbose chromium-level network logs: set `PWDEBUG=1` alongside `DEBUG=pw:network` to get browser console output too.
