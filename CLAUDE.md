@@ -41,3 +41,5 @@ Branch naming for features: `feat-<short-description>`
 - Useful combo for proxy issues: `DEBUG=pw:protocol,pw:network node script.js 2>&1 | grep -i proxy`
 - Useful combo for request interception: `DEBUG=pw:network node script.js 2>&1 | grep -i intercept`
 - For verbose chromium-level network logs: set `PWDEBUG=1` alongside `DEBUG=pw:network` to get browser console output too.
+- For WebSocket/CDP frame inspection: `DEBUG=pw:protocol node script.js 2>&1 | grep -i websocket`
+- Handy alias to add to shell profile: `alias pwdebug='DEBUG=pw:protocol,pw:network PWDEBUG=1'`
