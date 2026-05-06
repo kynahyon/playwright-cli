@@ -37,3 +37,5 @@ Branch naming for features: `feat-<short-description>`
 - Sync with upstream periodically: `git fetch upstream && git rebase upstream/main`
 - Focus areas: proxy handling, network interception, and CDP protocol internals.
 - When debugging CDP messages, use `DEBUG=pw:protocol` env var to dump raw protocol traffic.
+- When debugging network interception specifically, `DEBUG=pw:network` is more focused and less noisy.
+- Useful combo for proxy issues: `DEBUG=pw:protocol,pw:network node script.js 2>&1 | grep -i proxy`
