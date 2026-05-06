@@ -36,3 +36,4 @@ Branch naming for features: `feat-<short-description>`
 - My fork is for learning browser automation internals; not intended for production use.
 - Sync with upstream periodically: `git fetch upstream && git rebase upstream/main`
 - Focus areas: proxy handling, network interception, and CDP protocol internals.
+- When debugging CDP messages, use `DEBUG=pw:protocol` env var to dump raw protocol traffic.
