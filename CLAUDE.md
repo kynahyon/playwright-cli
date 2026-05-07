@@ -49,3 +49,4 @@ Branch naming for features: `feat-<short-description>`
 - When a test fails only in CI, check if the runner has a different proxy env (HTTP_PROXY/NO_PROXY vars) leaking into the process.
 - For inspecting raw HAR output during network interception work: `npx playwright --save-har=trace.har` then open in browser devtools network panel.
 - Reminder: `page.route()` intercepts at the browser level; `browserContext.route()` applies to all pages in the context — easy to mix these up.
+- For replaying a saved HAR file in tests: `await context.routeFromHAR('trace.har', { update: false })` — useful for offline/reproducible proxy auth testing.
