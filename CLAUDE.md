@@ -43,3 +43,5 @@ Branch naming for features: `feat-<short-description>`
 - For verbose chromium-level network logs: set `PWDEBUG=1` alongside `DEBUG=pw:network` to get browser console output too.
 - For WebSocket/CDP frame inspection: `DEBUG=pw:protocol node script.js 2>&1 | grep -i websocket`
 - Handy alias to add to shell profile: `alias pwdebug='DEBUG=pw:protocol,pw:network PWDEBUG=1'`
+- For filtering just SOCKS-related traffic: `DEBUG=pw:protocol,pw:network node script.js 2>&1 | grep -iE 'socks|auth|407'`
+- Node version in use: 20 LTS (nvm alias default 20); some CDP internals differ on Node 18 — keep this in mind when testing.
