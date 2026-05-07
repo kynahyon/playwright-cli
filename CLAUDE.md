@@ -47,3 +47,5 @@ Branch naming for features: `feat-<short-description>`
 - Node version in use: 20 LTS (nvm alias default 20); some CDP internals differ on Node 18 — keep this in mind when testing.
 - Chromium version in use: check with `npx playwright --version`; CDP differences between Chromium releases can affect proxy auth behavior.
 - When a test fails only in CI, check if the runner has a different proxy env (HTTP_PROXY/NO_PROXY vars) leaking into the process.
+- For inspecting raw HAR output during network interception work: `npx playwright --save-har=trace.har` then open in browser devtools network panel.
+- Reminder: `page.route()` intercepts at the browser level; `browserContext.route()` applies to all pages in the context — easy to mix these up.
