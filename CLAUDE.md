@@ -51,5 +51,5 @@ Branch naming for features: `feat-<short-description>`
 - Reminder: `page.route()` intercepts at the browser level; `browserContext.route()` applies to all pages in the context — easy to mix these up.
 - For replaying a saved HAR file in tests: `await context.routeFromHAR('trace.har', { update: false })` — useful for offline/reproducible proxy auth testing.
 - For a quick local SOCKS5 proxy to test against: `ssh -D 1080 -N localhost` spins one up on port 1080 without needing extra tooling.
-- To verify a SOCKS5 proxy is working: `curl --socks5 localhost:1080 https://example.com` — quick sanity check before running playwright tests against it.
-- To test proxy auth failure scenarios locally: `ssh -D 1080 -N localhost` doesn't require auth, so use `dante` or `microsocks` with a config if you need 407 responses.
+- To verify a SOCKS5 proxy is working: `curl --socks5 localhost:1080 https://example.com` — if it returns HTML, the proxy tunnel is up.
+- For a more realistic SOCKS5 proxy with auth support (username/password): use `dante` (`brew install dante` on macOS) and point config to `sockd.conf`.
